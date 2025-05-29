@@ -10,6 +10,15 @@ int main()
     cout << "Variant #5. Internet Protocol\n";	
     cout << "Author: Daniil Kazakov\n";
 
+	internet_protocol* subscriptions[MAX_FILE_ROWS_COUNT];
+	int size;
+
+	read("data.txt", subscriptions, size);
+	cout << "*****   *****\n\n";
+	for (int i = 0; i < size; i++)
+	{
+		cout << subscriptions[i]->begin.hours << ":" << subscriptions[i]->begin.minutes << ":" << subscriptions[i]->begin.seconds << " " << subscriptions[i]->end.hours << ":" << subscriptions[i]->end.minutes << ":" << subscriptions[i]->end.seconds << " " << subscriptions[i]->byterecived << " " << subscriptions[i]->bytesend << " " << subscriptions[i]->fileway << "\n";
+	}
 
     return 0;
 }

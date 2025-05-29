@@ -2,8 +2,8 @@
 #define INTERNET_PROTOCOL_H
 #include <string>
 #include "constants.h"
-
-struct time
+using namespace std;
+struct times
 {
     int hours;
     int minutes;
@@ -11,11 +11,11 @@ struct time
 };
 struct internet_protocol
 {
-    time begin;
-    time end;
-    unsigned long bytebeg;
-    unsigned long byteend;
-    string fileway;
+    times begin;
+    times end;
+    unsigned long byterecived;
+    unsigned long bytesend;
+    char fileway[MAX_STRING_SIZE];
 };
 
 #endif

@@ -13,3 +13,8 @@
 13:25:15 14:10:20 917504 458752 C:\Program Files\Discord\discord.exe
 15:00:00 16:20:45 1835008 917504 C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.exe
 14:50:10 15:30:30 450000 225000 C:\Program Files\Microsoft\Skype for Desktop\Skype.exe
+00:05:15 00:45:20 327680 163840 "C:\Program Files\Microsoft\Edge\Application\msedge.exe"
+03:30:10 04:15:40 819200 409600 "C:\Program Files\Windows Defender\MsMpEng.exe"
+06:20:05 07:10:25 1228800 614400 "C:\Program Files\TeamViewer\TeamViewer.exe"
+23:55:00 23:58:30 20480 10240 "C:\Program Files\CCleaner\CCleaner64.exe"
+12:59:10 16:00:30 40000 22500 C:\Program Files\Skype.exe

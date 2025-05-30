@@ -1,0 +1,6 @@
+00:10:00 00:20:00 3 5 C:\Program Files\Telegram\telegram.exe
+10:00:00 20:00:00 3 3 C:\Program Files\Google\Chrome\chrome.exe
+00:00:00 00:00:01 3 1 C:\Program Files\Zoom\bin\zoom.exe
+00:00:00 00:20:00 3 6 C:\Program Files\Zoom\bin\zoom.exe
+10:00:00 10:00:20 3 8 C:\Program Files\Google\Chrome\chrome.exe
+00:00:00 00:30:00 3 9 C:\Program Files\Zoom\bin\zoom.exe

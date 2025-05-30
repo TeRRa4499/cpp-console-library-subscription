@@ -7,11 +7,11 @@
 18:20:10 19:05:05 1572864 786432 C:\Program Files\Spotify\spotify.exe
 20:00:00 21:30:15 2097152 1048576 C:\Program Files\qBittorrent\qbittorrent.exe
 22:10:40 23:00:50 655360 327680 C:\Program Files\Microsoft VS Code\code.exe
-07:15:30 08:00:00 131072 65536 C:\Windows\System32\svchost.exe
+07:15:30 08:00:00 131072 65536 C:\Program Files\Microsoft\Skype for Desktop\Skype.exe
 09:45:20 10:30:10 262144 131072 C:\Program Files\Mozilla Thunderbird\thunderbird.exe
 11:50:05 12:40:30 393216 196608 C:\Program Files\Adobe\Acrobat\acrobat.exe
 13:25:15 14:10:20 917504 458752 C:\Program Files\Discord\discord.exe
-15:00:00 16:20:45 1835008 917504 C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.exe
+15:00:00 16:20:45 1835008 917504 C:\Program Files\Microsoft\Skype for Desktop\Skype.exe
 14:50:10 15:30:30 450000 225000 C:\Program Files\Microsoft\Skype for Desktop\Skype.exe
 00:05:15 00:45:20 327680 163840 "C:\Program Files\Microsoft\Edge\Application\msedge.exe"
 03:30:10 04:15:40 819200 409600 "C:\Program Files\Windows Defender\MsMpEng.exe"

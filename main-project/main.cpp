@@ -2,9 +2,12 @@
 #include "internet_protocol.h"
 #include "file_reader.h"
 #include "filter.h"
+#include "sorts.h"
 
 using namespace std;
-
+void output(internet_protocol* subscriptions) {
+	cout << subscriptions->begin.hours << ":" << subscriptions->begin.minutes << ":" << subscriptions->begin.seconds << " " << subscriptions->end.hours << ":" << subscriptions->end.minutes << ":" << subscriptions->end.seconds << " " << subscriptions->byterecived << " " << subscriptions->bytesend << " " << subscriptions->fileway << "\n";
+}
 int main()
 {
 	setlocale(LC_ALL, "Russian");
@@ -12,36 +15,51 @@ int main()
     cout << "Variant #5. Internet Protocol\n";	
     cout << "Author: Daniil Kazakov\n";
 //<<<<<<< HEAD
+	cout << "Group: 24ох1д\n";
 
 	internet_protocol* subscriptions[MAX_FILE_ROWS_COUNT];
 	int size;
 
 	read("data.txt", subscriptions, size);
 	cout << "*****   *****\n\n";
+
+	for (int i = 0; i < size; i++) output(subscriptions[i]);
+
+	cout << "***** by Time  *****\n\n";
+
+	insertionSort(subscriptions, cmpTimeDesc, size);
+
 	for (int i = 0; i < size; i++)
 	{
-		cout << subscriptions[i]->begin.hours << ":" << subscriptions[i]->begin.minutes << ":" << subscriptions[i]->begin.seconds << " " << subscriptions[i]->end.hours << ":" << subscriptions[i]->end.minutes << ":" << subscriptions[i]->end.seconds << " " << subscriptions[i]->byterecived << " " << subscriptions[i]->bytesend << " " << subscriptions[i]->fileway << "\n";
+		//cout << calculateUsageTime(subscriptions[i]->begin, subscriptions[i]->end) << ": ";
+		output(subscriptions[i]);
 	}
+
+	cout << "***** byCombo  *****\n\n";
+
+	hoarSort(subscriptions, cmpCombo, 0, size - 1);
+
+	for (int i = 0; i < size; i++) 
+	{
+		//cout << calculateUsageTime(subscriptions[i]->begin, subscriptions[i]->end) << ": ";
+		output(subscriptions[i]);
+	}
+
+	
 	int new_size;
 
 	internet_protocol** filteredSkype = filter(subscriptions, size, check_services_for_skype, new_size);
 	cout << "***** filteredSkype  *****\n\n";
-	for (int i = 0; i < new_size; i++)
-	{
-		cout << filteredSkype[i]->begin.hours << ":" << filteredSkype[i]->begin.minutes << ":" << filteredSkype[i]->begin.seconds << " " << filteredSkype[i]->end.hours << ":" << filteredSkype[i]->end.minutes << ":" << filteredSkype[i]->end.seconds << " " << filteredSkype[i]->byterecived << " " << filteredSkype[i]->bytesend << " " << filteredSkype[i]->fileway << "\n";
-	}
+	for (int i = 0; i < new_size; i++) output(filteredSkype[i]);
+
 	delete[] filteredSkype;
 
 	internet_protocol** filteredEight = filter(subscriptions, size, check_services_after_eight, new_size);
 	cout << "***** filteredEight  *****\n\n";
-	for (int i = 0; i < new_size; i++)
-	{
-		cout << filteredEight[i]->begin.hours << ":" << filteredEight[i]->begin.minutes << ":" << filteredEight[i]->begin.seconds << " " << filteredEight[i]->end.hours << ":" << filteredEight[i]->end.minutes << ":" << filteredEight[i]->end.seconds << " " << filteredEight[i]->byterecived << " " << filteredEight[i]->bytesend << " " << filteredEight[i]->fileway << "\n";
-	}
+	for (int i = 0; i < new_size; i++) output(filteredEight[i]);
+
 	delete[] filteredEight;
-
-    cout << "Group: 24ох1д\n";
-
+	
 	for (int i = 0; i < size; i++)
 {
 	delete subscriptions[i];
